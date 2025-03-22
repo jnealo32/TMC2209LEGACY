@@ -11,7 +11,7 @@ Simple Arduino library for driving the TMC2209 operated in Legacy Mode.
 
 Notes:
 -----------
-Documentation can be found in the header file in "src/"
+Documentation can be found in the header file in "src" folder
 
 Be sure to place entire TMC2209LEGACY folder inside of Arduino/libraries
 
