@@ -82,9 +82,9 @@ void TMC2209LEGACY::changeDirection() {
 }
 
 void TMC2209LEGACY::stepToAngle() {
-  angleDif = targetAngle - angle;
-  if (abs(angleDif) > degreesPerStep/2) {
+  if(!(getStepDif() == 0)) {
     atTarget = false;
+    angleDif = targetAngle - angle;
     if (angleDif <= -180) {
       angleDif += 360;
     } else if (angleDif > 180 ) {
@@ -98,17 +98,16 @@ void TMC2209LEGACY::stepToAngle() {
     step();
   } else {
     atTarget = true;
-    lastAngle = angle;
   }
 }
 
 void TMC2209LEGACY::stepToAngle(int delay) {             // MANUALLY SET STEP SPEED IN MICROSECONDS (recommended above 20)
-  angleDif = targetAngle - angle;
-  if (abs(angleDif) > degreesPerStep/2) {
+  if(!(getStepDif() == 0)) {
     atTarget = false;
-    if (angleDif < -180) {
+    angleDif = targetAngle - angle;
+    if (angleDif <= -180) {
       angleDif += 360;
-    } else if (angleDif >= 180 ) {
+    } else if (angleDif > 180 ) {
       angleDif -= 360;
     }
     if (angleDif < 0) {
@@ -119,7 +118,6 @@ void TMC2209LEGACY::stepToAngle(int delay) {             // MANUALLY SET STEP SP
     step(delay);
   } else {
     atTarget = true;
-    lastAngle = angle;
   }
 }
 
@@ -206,7 +204,7 @@ void TMC2209LEGACY::setAngle(float newAngle) {
     netSteps += 1;
     angle = (float) (360 * netSteps )/ ((float) (200 * microsteps * gearRatio));
   }
-  zeroAngle = newAngle;    // NOTE TO SELF: zeroAngle is redundant and can be removed, requires testing
+  zeroAngle = newAngle;    // NOTE TO SELF: create getter for zeroAngle
   angle = zeroAngle;
   setTargetAngle(zeroAngle);
 }

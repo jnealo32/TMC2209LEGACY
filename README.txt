@@ -1,7 +1,7 @@
 TMC2209LEGACY
-VERSION 1.0.0
+VERSION 1.0.1
 Author: Joseph Neal
-Date: 2025-03-21
+Date: 2025-04-30
 
 
 Description:

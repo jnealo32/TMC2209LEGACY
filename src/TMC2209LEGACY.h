@@ -50,7 +50,6 @@ public:
   void setGearRatio(int gr);            // Set desired gear ratio.
   void setAngle(float newAngle);        // Set new zero position to (current stepper position - newAngle).
   void setTargetAngle(float toAngle);   // Sets the angle which stepToAngle() steps towards.
-
 };
 
 #endif
