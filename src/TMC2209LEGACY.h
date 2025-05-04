@@ -2,7 +2,7 @@
  * Filename: TMC2209LEGACY.h
  * Version: 1.0.0
  * Author: Joseph Neal
- * Date: 2025-03-21
+ * Date: 2025-04-30
  * Description: Basic Arduino library for driving the TMC2209 operated in Legacy Mode.  (header file) 
  */
 
@@ -40,8 +40,8 @@ public:
   float getAngle();                     // Returns current angle.
   float getDegreesPerStep();            // Return the physical angle that corresponds to a single step.
   float getTargetAngle();               // Returns targetAngle.
-  float getAngleDif();                  // (BUGGY, does not always return shortest distance) Returns distance from current angle to target angle.
-  long getStepDif();                    // (BUGGY, does not always return exact step distance)
+  float getAngleDif();                  // Returns distance from current angle to target angle.
+  long getStepDif();                    // Returns the distance in steps from the current angle to the target angle.
   long getNetSteps();                   // Returns the clockwise distance in steps from zero position.
 
   // Setters
