@@ -20,7 +20,7 @@ private:
   long netSteps;   
   float angle, zeroAngle, targetAngle, lastAngle, degreesPerStep, angleDif;   // zeroAngle is obsolete             
 public:
-  bool atTarget;                        // not properly implemented yet
+  bool atTarget;                        
 
   // Constructor
   TMC2209LEGACY(int step_pin, int dir_pin, int en_pin, int ms1_pin, int ms2_pin);
