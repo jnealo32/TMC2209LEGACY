@@ -18,7 +18,7 @@ private:
   float gearRatio;
   bool direction;
   long netSteps;   
-  float angle, zeroAngle, targetAngle, lastAngle, degreesPerStep, angleDif;   // zeroAngle is obsolete             
+  float angle, zeroAngle, targetAngle, lastAngle, degreesPerStep, angleDif;              
 public:
   bool atTarget;                        
 
