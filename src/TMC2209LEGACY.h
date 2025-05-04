@@ -1,6 +1,6 @@
 /*
  * Filename: TMC2209LEGACY.h
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Joseph Neal
  * Date: 2025-04-30
  * Description: Basic Arduino library for driving the TMC2209 operated in Legacy Mode.  (header file) 
