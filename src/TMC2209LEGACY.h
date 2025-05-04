@@ -46,7 +46,7 @@ public:
 
   // Setters
   void setDirection(bool dir);          // Set direction of step().
-  void setMicrosteps(int ms);           // Set desired microstepping.
+  void setMicrosteps(int ms);           // Set desired microstepping: 8 (Default), 16, 32, 64
   void setGearRatio(int gr);            // Set desired gear ratio.
   void setAngle(float newAngle);        // Set new zero position to (current stepper position - newAngle).
   void setTargetAngle(float toAngle);   // Sets the angle which stepToAngle() steps towards.
